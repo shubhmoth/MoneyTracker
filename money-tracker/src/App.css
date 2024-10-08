@@ -1,38 +1,99 @@
-.App {
+*{
+  box-sizing: border-box;
+}
+body {
+  background-color: #6d2c2c;
+  color: #ddd;
+}
+main {
+  max-width: 360px;
+  margin: 0 auto;
+}
+h1 {
   text-align: center;
+  color: #fff;
+  margin: 30px 0 30px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  margin-top: 30px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form input {
+  width: 100%;
+  padding: 2px 5px;
+  border: 1px solid #ddd;
+  background-color: transparent;
+  color: #ddd;
+  border-radius: 5px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form div.basic {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 5px;
+  margin-bottom: 5px;
+  color: #ddd;
 }
-
-.App-link {
-  color: #61dafb;
+form input[type="datetime-local"] {
+  color: #ddd;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form button {
+  width: 100%;
+  margin-top: 10px;
+  border: 0;
+  cursor: pointer;
+  background-color: #ddd;
+  color: #6d2c2c;
+  padding: 5px;
+  border-radius: 5px;
+}
+div.transactions {
+  margin-top: 20px;
+}
+div.transaction {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 5px 0;
+  border-top: 1px solid #ddd;
+}
+div.transaction:first-child {
+  border-top: 0;
+}
+div.transaction div.name {
+  font-size: 1.2em;
+}
+div.transaction div.description {
+  font-size: 0.8em;
+  color: #888;
+}
+div.transaction div.price {
+  font-size: 1.2em;
+}
+div.transaction div.datetime {
+  font-size: 0.8em;
+  color: #888;
+}
+div.transaction div.category {
+  font-size: 0.8em;
+  color: #888;
+}
+.description input::placeholder {
+  color: rgb(139, 129, 129);
+  font-size: 0.9em;
+}
+.basic input::placeholder {
+  color: rgb(139, 129, 129);
+  font-size: 0.9em;
+}
+.description input {
+  height: 60px;
+  font-size: 1.1em;
+  padding: 10px;
+}
+.description {
+  margin-top: 10px;
+}
+div.price.green{
+  color: #1c1;
+}
+div.price.red{
+  color: rgb(245, 6, 6);
 }
